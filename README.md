@@ -31,27 +31,28 @@ You now have the project repository, and can make edits as you please.
 
 ## Make a study script
 
-Next we will make an example study script. In your terminal, navigate to the `studies` folder and create a new script, just use your name. This tutorial is made for you to actually do these steps.
+Next we will make an example study script. In your terminal, navigate to the `studies` folder and create a new script, just use your name instead of `jack`. This tutorial is made for you to actually do these steps.
 
 ```
+cd Desktop/jenkins-tutorial
 cd studies
-notepad jack.bat
+notepad YOUR_NAME_HERE.bat
 ```
 
-This created a shell script file called `jack.bat` and opened it in Notepad for editing. If you want, you can open Explorer to see that the project folder and files exist.
-
-For our example study, our shell script will simply open a browser to the Georgia Tech homepage. In reality you can do a whole lot more with this script (run Python scripts, compile code, launch browsers on different screen, run other programs, and so on). Copy the below in:
+This created a shell script file called `jack.bat` and opened it in Notepad for editing. If you want, you can open Explorer to see that the project folder and files exist. Copy the below into your shell script:
 
 ```
 echo "Now starting the user study!"
 # Open Microsoft Edge
-msedge gatech.edu
+start msedge gatech.edu
 echo "All set up!"
 # Keep the terminal open until the ENTER key is pressed
 read
 ```
 
-In your terminal, test your script:
+For our example study, our shell script will simply open a browser to the Georgia Tech homepage. In reality you can do a whole lot more with this script (run Python scripts, compile code, launch browsers on different screen, run other programs, and so on).
+
+In Powershell, test your script:
 
 ```
 jack.bat
