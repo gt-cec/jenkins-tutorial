@@ -71,11 +71,13 @@ At this point you have made a shell script to launch your study, and you have pu
 
 ## Install Jenkins
 
-Jenkins is a tool to manage CI/CD functionality. It has a pretty UI, is beginner friendly, and is widely used across industry and academia.
+Jenkins is a tool to manage CI/CD functionality. It has a pretty UI, is beginner friendly, and is widely used across industry. Jenkins is designed for both smaller home projects (what we do) and larger distributed projects (like having dedicated test and production servers that queue builds and test code functionality).
 
 Jenkins is written in Java, which means there are two ways to install or run Jenkins:
 
-1. Through their installer, this runs Jenkins through the SYSTEM (not your logged in user) and launches the service in the background on login.
+1. Through their installer, this creates a system service that launches Jenkins in the background on login. It is possible that GT does not allow for using the installer.
+2. Through running their `.jar` file, this runs Jenkins as the user and requires that [Java is installed](https://openjdk.org/).
 
-2. Through running their Java file, this runs Jenkins as the USER
+If the lab computers allow it, I would use the installer. If not, the `.jar` works perfectly fine. You can download either from the [Jenkins website](https://jenkins.io).
 
+Jenkins is not a program, instead it runs a webserver that you can connect to. Once Jenkins is running, open a browser to `localhost:8080`, and you will start a setup process.
