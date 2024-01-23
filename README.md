@@ -80,4 +80,7 @@ Jenkins is written in Java, which means there are two ways to install or run Jen
 
 If the lab computers allow it, I would use the installer. If not, the `.jar` works perfectly fine. You can download either from the [Jenkins website](https://jenkins.io).
 
-Jenkins is not a program, instead it runs a webserver that you can connect to. Once Jenkins is running, open a browser to `localhost:8080`, and you will start a setup process.
+Jenkins does not have a window interface, instead it runs a webserver (which is useful for running it on dedicated servers that do not have a desktop). Once Jenkins is running, open a browser to `localhost:8080`, and you will start a setup process. Just follow the instructions, and the default settings should be fine.
+
+For setting up, our projects only need the most basic functions. When you reach the "Plugins" page, deselect everything with the "None" button at the top, and select `git`, `GitHub`, and `MS Build` (if your project requires compiling a Visual Studio solution).
+
