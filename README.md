@@ -67,7 +67,15 @@ git push
 
 If your SSH keys are set up, and you have access to the CEC GitHub, the code changes will push without issue.
 
-At this point you have a study script and you have pushed it to GitHub.
+At this point you have made a shell script to launch your study, and you have pushed it to GitHub. In practice this repository is the project repository, so to do this for another project you would just write a shell script there.
 
-## Clone the GitHub repo
+## Install Jenkins
+
+Jenkins is a tool to manage CI/CD functionality. It has a pretty UI, is beginner friendly, and is widely used across industry and academia.
+
+Jenkins is written in Java, which means there are two ways to install or run Jenkins:
+
+1. Through their installer, this runs Jenkins through the SYSTEM (not your logged in user) and launches the service in the background on login.
+
+2. Through running their Java file, this runs Jenkins as the USER
 
