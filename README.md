@@ -31,27 +31,28 @@ You now have the project repository, and can make edits as you please.
 
 ## Make a study script
 
-Next we will make an example study script. In your terminal, navigate to the `studies` folder and create a new script, just use your name. This tutorial is made for you to actually do these steps.
+Next we will make an example study script. In your terminal, navigate to the `studies` folder and create a new script, just use your name instead of `jack`. This tutorial is made for you to actually do these steps.
 
 ```
+cd Desktop/jenkins-tutorial
 cd studies
-notepad jack.bat
+notepad YOUR_NAME_HERE.bat
 ```
 
-This created a shell script file called `jack.bat` and opened it in Notepad for editing. If you want, you can open Explorer to see that the project folder and files exist.
-
-For our example study, our shell script will simply open a browser to the Georgia Tech homepage. In reality you can do a whole lot more with this script (run Python scripts, compile code, launch browsers on different screen, run other programs, and so on). Copy the below in:
+This created a shell script file called `jack.bat` and opened it in Notepad for editing. If you want, you can open Explorer to see that the project folder and files exist. Copy the below into your shell script:
 
 ```
 echo "Now starting the user study!"
 # Open Microsoft Edge
-msedge gatech.edu
+start msedge gatech.edu
 echo "All set up!"
 # Keep the terminal open until the ENTER key is pressed
 read
 ```
 
-In your terminal, test your script:
+For our example study, our shell script will simply open a browser to the Georgia Tech homepage. In reality you can do a whole lot more with this script (run Python scripts, compile code, launch browsers on different screen, run other programs, and so on).
+
+In Powershell, test your script:
 
 ```
 jack.bat
@@ -80,4 +81,7 @@ Jenkins is written in Java, which means there are two ways to install or run Jen
 
 If the lab computers allow it, I would use the installer. If not, the `.jar` works perfectly fine. You can download either from the [Jenkins website](https://jenkins.io).
 
-Jenkins is not a program, instead it runs a webserver that you can connect to. Once Jenkins is running, open a browser to `localhost:8080`, and you will start a setup process.
+Jenkins does not have a window interface, instead it runs a webserver (which is useful for running it on dedicated servers that do not have a desktop). Once Jenkins is running, open a browser to `localhost:8080`, and you will start a setup process. Just follow the instructions, and the default settings should be fine.
+
+For setting up, our projects only need the most basic functions. When you reach the "Plugins" page, deselect everything with the "None" button at the top, and select `git`, `GitHub`, and `MS Build` (if your project requires compiling a Visual Studio solution).
+
