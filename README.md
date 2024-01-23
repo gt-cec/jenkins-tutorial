@@ -31,7 +31,43 @@ You now have the project repository, and can make edits as you please.
 
 ## Make a study script
 
-Next we will make a fake study script. Navigate to the `studies` folder and create a new script.
+Next we will make an example study script. In your terminal, navigate to the `studies` folder and create a new script, just use your name. This tutorial is made for you to actually do these steps.
+
+```
+cd studies
+notepad jack.bat
+```
+
+This created a shell script file called `jack.bat` and opened it in Notepad for editing. If you want, you can open Explorer to see that the project folder and files exist.
+
+For our example study, our shell script will simply open a browser to the Georgia Tech homepage. In reality you can do a whole lot more with this script (run Python scripts, compile code, launch browsers on different screen, run other programs, and so on). Copy the below in:
+
+```
+echo "Now starting the user study!"
+# Open Microsoft Edge
+msedge gatech.edu
+echo "All set up!"
+# Keep the terminal open until the ENTER key is pressed
+read
+```
+
+In your terminal, test your script:
+
+```
+jack.bat
+```
+
+With our study script ready, track the changes, commit them, and push to GitHub. In the terminal:
+
+```
+git add jack.bat
+git commit -m "added a study script"
+git push 
+```
+
+If your SSH keys are set up, and you have access to the CEC GitHub, the code changes will push without issue.
+
+At this point you have a study script and you have pushed it to GitHub.
 
 ## Clone the GitHub repo
 
