@@ -135,6 +135,8 @@ git@github.com:gt-cec/jenkins-tutorial
 
 For the credentials, you will need to enter your SSH private key so Jenkins can use it to authenticate as you. Click "Add" -> "Jenkins", set the Kind to "SSH Username with private key", leave the text fields blank, check "Enter directly", and click "Add". Open the private SSH key (probably `C:\Users\YOUR_USER\.ssh\id_ed25519`) in Notepad, copy the entire contents (including the blank line at the end), and paste it into this Private Key field. If you set a Passphrase for your SSH key, enter it in the Passphrase text field.
 
+![image](https://github.com/gt-cec/jenkins-tutorial/assets/23145260/01346ff2-8558-4af3-97e3-92c38c283ef6)
+
 Change the "Branches to build" text field from `*/master` to `*/main`, which is what GitHub uses as their primary branch name. If you want to deploy from a different branch, set that here.
 
 The other settings can be default, if your project uses Git LFS you can set that in "Additional Behaviors".
@@ -151,6 +153,8 @@ If the panel below "Build History" shows the latest build with a green checkmark
 ## Running the Study Shell Script
 
 At this point you have a project on GitHub that Jenkins is cloning and regularly pulling to. Now you need to tell Jenkins to run the study shell script you made (`<name>.bat`) after it pulls a new commit. We will do this through a "Build Step" in the job configuration.
+
+![image](https://github.com/gt-cec/jenkins-tutorial/assets/23145260/e0bf0eea-6e93-4e85-9272-7966d3c5877d)
 
 After Jenkins pulls your code changed, it creates a build process that runs all the Build Steps you specify, in order. This means that if your build creates subprocesses, all the subprocesses will be terminated when the build process ends. For example, if your project runs a "detached" Python script, the Python script will exit when the build steps are complete. Some programs (like Microsoft Edge) create themselves as new processes instead of as subprocesses, so are not terminated. Since we usually want our projects to be "forever processes" after they build and start, there are two ways we can handle this:
 
@@ -212,6 +216,8 @@ If you are using the proper way, use this script to start the "Study Server" tas
 # for Windows
 schtasks /run /tn "Study Server"
 ```
+
+![image](https://github.com/gt-cec/jenkins-tutorial/assets/23145260/3686aeb9-28b7-4528-bee9-8833b44a1fcb)
 
 And with that, you are all set! Save the job at the bottom of the page, go back to the job's dashboard, and test the build process by clicking "New Build". You should see the build appear in the middle-left, and a few seconds later, see Microsoft Edge open to the Georgia Tech homepage. As usual, if Microsoft Edge does not open, review your steps at this time.
 
